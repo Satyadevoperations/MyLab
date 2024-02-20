@@ -2,7 +2,7 @@ pipeline{
     //Directives
     agent any
     tools {
-        maven 'M3'
+        maven 'maven3'
     }
 
     stages {
@@ -11,7 +11,7 @@ pipeline{
         // stage 1. Build
         stage ('Build'){
             steps {
-                sh 'mvn clean compile package'
+                sh 'mvn clean install compile package'
             }
         }
 
